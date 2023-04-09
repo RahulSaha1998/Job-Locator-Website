@@ -1,0 +1,26 @@
+[
+    {   
+        "id":1,
+        "category_logo": "https://cdn.iconscout.com/icon/premium/png-256-thumb/job-title-4671156-3873965.png",
+        "category_name": "Account & Finance",
+        "jobs_available": "300 Jobs Available"
+    },
+    {
+        "id":2,
+        "category_logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR59s7vgMv21woPNuTEIQJ5U2_aEwS4QFZObgkmeQicNPEMFHKPxL0bPAeuApfoBsDp9jw&usqp=CAU",
+        "category_name": "Creative Design",
+        "jobs_available": "100+ Jobs Available"
+    },
+    {
+        "id":3,
+        "category_logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxS2YayhAwC-IE5lPpO-s3-_7JcpgJY-TkMbzYm_qUXJ7xq9Kxed2wySANisSWBHBbiEo&usqp=CAU",
+        "category_name": "Marketing & Sales",
+        "jobs_available": "150 Jobs Available"
+    },
+    {
+        "id":4,
+        "category_logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFSldIgK4Vy50vlOvcvH29Hz2he248aYw18bvLkGEKKD3ZNuH_9hDE97IDxDtvuXAuGDk&usqp=CAU",
+        "category_name": "Engineering Job",
+        "jobs_available": "224 Jobs Available"
+    }
+]

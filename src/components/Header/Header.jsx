@@ -15,7 +15,7 @@ const Header = () => {
                 <Link to='/blog'>Blog</Link>
             </div>
             <div>
-                <button class="btn btn-info">Start Applying</button>
+                <button className="btn btn-info">Start Applying</button>
             </div>
         </nav>
     );

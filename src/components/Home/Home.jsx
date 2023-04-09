@@ -1,25 +1,32 @@
 import React from 'react';
+import JobCategory from '../JobCategory/JobCategory';
+import { useLoaderData } from 'react-router-dom';
+import BannerSection from '../BannerSection/BannerSection';
 
 const Home = () => {
+    const category = useLoaderData();
+
     return (
-        <div className='md:grid grid-cols-2 justify-center mx-10 mt-5 p-5 card shadow-xl'>
-            <div className=''>
-                <div className='lg:mt-20 lg:grid grid-rows-1 justify-center'>
-                    <h4 className='text-start text-4xl font-semibold'>One Step <br /> Closer To Your <br /> <span className='text-cyan-500'>Dream job</span></h4>
-                    <p className='mt-3 text-start'>
-                        Explore thousands of job opportunities with all the <br /> information you need. Its your future. Come find it. Manage all <br /> your job application from start to finish.
-                    </p>
-                    <div className='text-start mt-3'>
-                        <button class="btn btn-info">Get Started</button>
-                    </div>
-                </div>
+        <div className='mx-10 mt-10'>
+            <div>
+                <BannerSection></BannerSection>
             </div>
-            <div className='text-center'>
-                <div className='mt-5'>
-                    <img className='rounded w-5/6' src="1.jpg" alt="" />
-                </div>
+
+            <div className='text-center mt-24'>
+                <h2 className='font-semibold text-3xl mb-5'>Job Category List</h2>
+                <p>Explore thousands of job opportunities with all the information you need. Its your future</p>
+            </div>
+
+            <div className='md:flex justify-evenly mt-5'>
+                {
+                    category.map(ct => <JobCategory
+                        key={ct.id}
+                        ct={ct}
+                    ></JobCategory>)
+                }
             </div>
         </div>
+
     );
 };
 
