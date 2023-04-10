@@ -1,14 +1,13 @@
 import { data } from 'autoprefixer';
 import React, { useEffect, useState } from 'react';
+import JobDetails from '../JobDetails/JobDetails'
+// import { useHistory } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
 
 
 const FeaturedJobs = ({ dt }) => {
-    const { company_logo, company_name, educational_requirements, experiences, job_description
-        , job_responsibility, job_title, job_type, location, salary, remote_or_onsite } = dt;
-
-        
-
-
+    const { company_logo, company_name, job_title, job_type, location, salary, remote_or_onsite, id } = dt;
 
     return (
         <div className='mt-5'>
@@ -37,7 +36,8 @@ const FeaturedJobs = ({ dt }) => {
                         </div>
                     </section>
                     <div>
-                        <button className="btn btn-info">View Details</button>
+                        {/* <button className="btn btn-info">View Details</button> */}
+                        <button className='btn btn-info'><p><Link to={`/jobDetails/${id}`}>Show Details</Link></p></button>
                     </div>
                 </div>
             </div>

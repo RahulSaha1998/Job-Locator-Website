@@ -4,7 +4,7 @@ import './Header.css'
 
 const Header = () => {
     return (
-        <nav className='card-normal flex justify-between items-center mx-10 shadow-xl p-5 rounded-xl'>
+        <nav className='card-normal flex justify-between items-center mx-10 shadow-xl p-5 rounded-xl bg-slate-100'>
             <div>
                 <h2 className='font-bold text-2xl'>Job Locator</h2>
             </div>

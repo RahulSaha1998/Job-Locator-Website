@@ -10,16 +10,17 @@ import Main from './components/layout/Main';
 import Blog from './components/Blog/Blog';
 import Statistics from './components/Statistics/Statistics';
 import AppliedJobs from './components/Applied-jobs/AppliedJobs';
+import JobDetails from './components/JobDetails/JobDetails';
 
-const router  = createBrowserRouter([
+const router = createBrowserRouter([
   {
     path: '/',
     element: <Main></Main>,
-    children:[
+    children: [
       {
         path: '/',
         element: <Home></Home>,
-        loader: ()=> fetch('category.json')
+        loader: () => fetch('/category.json')
       },
       {
         path: '/blog',
@@ -32,14 +33,19 @@ const router  = createBrowserRouter([
       {
         path: '/appliedJob',
         element: <AppliedJobs></AppliedJobs>
+      },
+      {
+        path: '/jobDetails/:id',
+        element: <JobDetails></JobDetails>,
+        loader:({params}) => fetch(`/jobdata.json`)
       }
-      
+
     ]
   }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-     <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )
