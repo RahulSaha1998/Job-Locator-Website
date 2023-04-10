@@ -7,12 +7,32 @@ import FeaturedJobs from '../FeaturedJobs/FeaturedJobs';
 const Home = () => {
     const category = useLoaderData();
 
-    const [data, setData]= useState([]);
-    useEffect(()=>{
+    // const [data, setData]= useState([]);
+    // useEffect(()=>{
+    //     fetch('jobdata.json')
+    //     .then(res => res.json())
+    //     .then(data => setData(data))
+    // },[])
+
+
+    const [data, setData] = useState([]);
+    const [displayedData, setDisplayedData] = useState([]);
+    const [showMore, setShowMore] = useState(true);
+
+    useEffect(() => {
         fetch('jobdata.json')
-        .then(res => res.json())
-        .then(data => setData(data))
-    },[])
+            .then(res => res.json())
+            .then(data => {
+                setData(data);
+                setDisplayedData(data.slice(0, 4));
+            });
+    }, [])
+
+    const handleShowMore = () => {
+        setDisplayedData(data); 
+        setShowMore(false); 
+    }
+
 
     return (
         <div className='mx-10 mt-10'>
@@ -40,12 +60,19 @@ const Home = () => {
             </div>
 
             <div className='md:grid grid-cols-2 gap-5 mx-10'>
+
                 {
-                  data.map(dt =><FeaturedJobs
-                  key={dt.id}
-                  dt = {dt}
-                  ></FeaturedJobs>)  
+                    displayedData.map(dt => <FeaturedJobs
+                        key={dt.id}
+                        dt={dt}
+                    ></FeaturedJobs>)
                 }
+
+            </div>
+            <div className='text-center mt-5'>
+                {showMore && (
+                    <button className="btn btn-info" onClick={handleShowMore}>See All Jobs</button>
+                )}
             </div>
         </div>
 

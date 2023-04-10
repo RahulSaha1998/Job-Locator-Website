@@ -3,9 +3,12 @@ import React, { useEffect, useState } from 'react';
 
 
 const FeaturedJobs = ({ dt }) => {
-    console.log(dt);
     const { company_logo, company_name, educational_requirements, experiences, job_description
         , job_responsibility, job_title, job_type, location, salary, remote_or_onsite } = dt;
+
+        
+
+
 
     return (
         <div className='mt-5'>
