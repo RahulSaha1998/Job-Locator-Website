@@ -36,8 +36,7 @@ const FeaturedJobs = ({ dt }) => {
                         </div>
                     </section>
                     <div>
-                        {/* <button className="btn btn-info">View Details</button> */}
-                        <button className='btn btn-info'><p><Link to={`/jobDetails/${id}`}>Show Details</Link></p></button>
+                        <Link to={`/jobDetails/${id}`}><button className='btn btn-info'>Show Details</button></Link>
                     </div>
                 </div>
             </div>
