@@ -10,7 +10,7 @@ const BannerSection = () => {
                         Explore thousands of job opportunities with all the <br /> information you need. Its your future. Come find it. Manage all <br /> your job application from start to finish.
                     </p>
                     <div className='text-start mt-3'>
-                        <button class="btn btn-info">Get Started</button>
+                        <button className="btn btn-info">Get Started</button>
                     </div>
                 </div>
             </div>
