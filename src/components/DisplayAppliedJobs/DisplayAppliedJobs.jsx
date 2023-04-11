@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const DisplayAppliedJobs = ({ job }) => {
-    const { company_logo, company_name, job_title, remote_or_onsite, salary, job_type, location } = job;
+    const { company_logo, company_name, job_title, remote_or_onsite, salary, job_type, location,id } = job;
     return (
         <div>
             <div className="card card-compact w-6/12  h-full bg-slate-100 shadow-xl mx-auto m-5">
@@ -34,7 +35,8 @@ const DisplayAppliedJobs = ({ job }) => {
                             </div>
                         </div>
                         <div className="card-actions lg:justify-end">
-                            <button className='btn btn-info'>View Details</button>
+                            {/* <button className='btn btn-info'>View Details</button> */}
+                            <Link to={`/jobDetails/${id}`}><button className='btn btn-info'>View Details</button></Link>
                         </div>
                     </div>
 
