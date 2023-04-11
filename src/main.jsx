@@ -13,6 +13,7 @@ import AppliedJobs from './components/Applied-jobs/AppliedJobs';
 import JobDetails from './components/JobDetails/JobDetails';
 import NotFound from './components/NotFound/NotFound';
 import appliedJobsLoader from './loaders/appliedJobsLoader';
+import { ToastContainer, toast } from 'react-toastify';
 
 const router = createBrowserRouter([
   {
@@ -40,11 +41,12 @@ const router = createBrowserRouter([
       {
         path: '/jobDetails/:id',
         element: <JobDetails></JobDetails>,
-        loader:({params}) => fetch(`/jobdata.json`)
+        loader: ({ params }) => fetch(`/jobdata.json`)
       },
       {
         path: '*',
-        element: <NotFound></NotFound>
+        element: <NotFound></NotFound>,
+
       }
 
     ]
@@ -54,5 +56,6 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
+    <ToastContainer />
   </React.StrictMode>,
 )
