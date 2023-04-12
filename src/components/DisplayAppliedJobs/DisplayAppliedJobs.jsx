@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const DisplayAppliedJobs = ({ job }) => {
-    const { company_logo, company_name, job_title, remote_or_onsite, salary, job_type, location,id } = job;
+    const { company_logo, company_name, job_title, remote_or_onsite, salary, job_type, location, id } = job;
     return (
         <div>
             <div className="card card-compact w-6/12  h-full bg-slate-100 shadow-xl mx-auto m-5">
@@ -15,8 +15,10 @@ const DisplayAppliedJobs = ({ job }) => {
                             <h2 className="card-title">{job_title}</h2>
                             <p>{company_name}</p>
                             <div className="card-actions mt-2">
-                                <button className="btn btn-outline btn-success">{job_type}</button>
-                                <button className="btn btn-outline btn-success">{remote_or_onsite}</button>
+                                <div className='flex my-2'>
+                                    <button className="btn btn-outline btn-success mr-2">{job_type}</button>
+                                    <button className="btn btn-outline btn-success">{remote_or_onsite}</button>
+                                </div>
                                 <section className=' gap-10'>
                                     <div className='flex'>
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -34,7 +36,7 @@ const DisplayAppliedJobs = ({ job }) => {
                                 </section>
                             </div>
                         </div>
-                        <div className="card-actions lg:justify-end">
+                        <div className="card-actions lg:justify-end sm:mt-2">
                             {/* <button className='btn btn-info'>View Details</button> */}
                             <Link to={`/jobDetails/${id}`}><button className='btn btn-info'>View Details</button></Link>
                         </div>

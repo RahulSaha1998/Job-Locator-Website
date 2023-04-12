@@ -13,7 +13,7 @@ const FeaturedJobs = ({ dt }) => {
         <div className='mt-5'>
             <div className="card card-compact w-full  h-full bg-slate-100 shadow-xl">
                 <div className="card-body">
-                    <img className='sm:w-2/6 md:w-1/6 rounded' src={company_logo} alt="" />
+                    <img className='sm:w-2/6 md:w-2/6 lg:w-1/6 rounded' src={company_logo} alt="" />
                     <h2 className="card-title">{job_title}</h2>
                     <p>{company_name}</p>
                     <div className="card-actions">

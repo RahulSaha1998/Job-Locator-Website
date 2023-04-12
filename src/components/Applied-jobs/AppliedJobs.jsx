@@ -36,7 +36,7 @@ const AppliedJobs = () => {
                         <button className='btn btn-info'>Onsite</button>
                     </div>
                 </div>
-                <div className='mt-5 mx-20'>
+                <div className='mt-5 lg:mx-20'>
                     {
                         appliedData.map(job => <DisplayAppliedJobs
                             key={job.id}

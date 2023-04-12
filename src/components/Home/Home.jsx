@@ -45,7 +45,8 @@ const Home = () => {
                 <p>Explore thousands of job opportunities with all the information you need. Its your future</p>
             </div>
 
-            <div className='md:flex justify-evenly mt-5 sm:mx-36 md:mx-5'>
+            <div className='grid sm: grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
+            {/* // md:flex justify-evenly mt-5 sm:mx-36 md:mx-5 */}
                 {
                     category.map(ct => <JobCategory
                         key={ct.id}
