@@ -1,8 +1,8 @@
 nav a{
     margin-right: 15px;
     font-size: large;
-    color: blueviolet;
+    color: blue;
 }
 a:hover {
-    color: brown;
+    color: blueviolet;
   }
