@@ -6,4 +6,7 @@
 - Then Features Job it will contain 6 json data and first fetch 4 data to the UI and if i click See all jobs it will show full data.
 - it contains a button show details if i click it will show the details of the data.
 - and then I can apply the jobs and and it will show in applied jobs and saved the data in local storage.
-- And then fetch the local storage data to applied jobs route. 
+- And then fetch the local storage data to applied jobs route.
+- then set 3 buttons remote, onsite and all data if i click them it will show their matching related data.
+- and there is create 2 chart pie chart and radar chart in statistic root . this value is based on my some assignment results.
+- And Blog route shows some question answer. 
