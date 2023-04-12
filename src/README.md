@@ -1,4 +1,7 @@
-## Hello there is some features and live website link of this project.
+## Hello, there is some features and live website link of this project.
+
+- Live Link -> https://melodic-pegasus-f2b864.netlify.app/
+
 
 - First we create a navbar and there contains a name and some links and the navbar is common for all the roots.
 - Than the banner section there is a graduate picture of mine and some titles.
